@@ -21,5 +21,27 @@ Después volvemos a ejecutar el contenedor con el volumen asignado a esa ruta y 
 ``` bash
 docker run --rm -p 80:80 -p 443:443 \
 -v ./v1-reverse-proxy/nginx/default.conf:/etc/nginx/conf.d/default.conf \
+--network server-http \
 --name nginx nginx:stable-alpine3.23
+```
+
+Agregamos el segundo contenedor para redireccionar y aplicar el proxy reverso. Primero validamos que este funcionando
+
+``` bash
+docker run --rm -p 81:80 -p 444:443 \
+-v ./v1-reverse-proxy/backend:/usr/share/nginx/html \
+--network server-http \
+--name nginx nginx:stable-alpine3.23
+```
+
+Por último agregamos una red que fue previamente creada para interactuar entre servidores.
+
+``` bash
+docker network create server-http
+```
+
+Antes de la etiqueta '--name' en nuestro comando de docker agregamos lo siguiente:
+
+``` bash
+docker --network server-http
 ```
