@@ -4,5 +4,12 @@ En está siguiente versión voy a agregar varios sitios para que nginx se encarg
 
 También se verá el networking de docker usando el nombre de servicio de cada contenedor.
 
-Voy a mantener diferentes archivos por cada sitio para hacer más fácil el manejo, y tener un mejor entendimiento. En la carpeta nginx dejaré las configuraciones de sitios y en web la respuesta de cada uno.
+Una vez tengo los archivos `default.conf` y las carpetas app y bienvenida con sus respectivos `index.html`, ejecutamos con el siguiente comando:
+
+```bash
+docker-compose up
+```
+
+Después visitando las páginas '/app' y '/bienvenida' tendrémos la respuesta de cada index.
+
 
