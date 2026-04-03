@@ -1,0 +1,20 @@
+services:
+  nginx:
+    image: nginx:stable-alpine3.23
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - server-http
+
+  backend:
+    image: nginx:stable-alpine3.23
+    volumes:
+      - ./backend:/usr/share/nginx/html
+    networks:
+      - server-http
+
+networks:
+  server-http:
+    external: true

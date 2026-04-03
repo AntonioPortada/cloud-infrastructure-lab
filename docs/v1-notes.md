@@ -43,5 +43,12 @@ docker network create server-http
 Antes de la etiqueta '--name' en nuestro comando de docker agregamos lo siguiente:
 
 ``` bash
-docker --network server-http
+--network server-http
+```
+
+### Extra
+Voy a agregar un dockerfile para hacer más práctico el ejercicio. Dentro de la carpeta v1-reverse-proxy pega el siguiente comando.
+
+``` bash
+docker-compose up
 ```
