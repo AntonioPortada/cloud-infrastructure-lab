@@ -1,0 +1,30 @@
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:stable-alpine3.23
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - server-http
+
+  app:
+    container_name: app
+    image: nginx:stable-alpine3.23
+    volumes:
+      - ./web/app:/usr/share/nginx/html
+    networks:
+      - server-http
+
+  backend:
+    container_name: bienvenida
+    image: nginx:stable-alpine3.23
+    volumes:
+      - ./web/bienvenida:/usr/share/nginx/html
+    networks:
+      - server-http
+
+networks:
+  server-http:
+    external: true
