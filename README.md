@@ -22,11 +22,11 @@ El objetivo de este proyecto es:
 
 | Versión | Tema | Estado |
 
-| v1 | Proxy inverso + HTTPS | ✅ Completado |
-| v2 | Redes Docker + Múltiples servicios | ⏳ Completado |
-| v3 | Angular + Spring Boot Containers | ⏳ Planificado |
-| v4 | Tubería CI/CD | ⏳ Planificado |
-| v5 | Equilibrador de carga / Despliegue azul-verde | ⏳ Planificado |
+ v1 | Proxy inverso + HTTPS | ✅ Completado |
+ v2 | Redes Docker + Múltiples servicios | ⏳ Trabajando |
+ v3 | Angular + Spring Boot Containers | ⏳ Planificado |
+ v4 | Tubería CI/CD | ⏳ Planificado |
+ v5 | Equilibrador de carga / Despliegue azul-verde | ⏳ Planificado |
 
 ---
 
