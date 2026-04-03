@@ -1,4 +1,4 @@
-# v1-reverse-proxy - https
+# v1-reverse-proxy
 Ejercicios de configuración para el servidor nginx 
 
 Voy a usar docker para hacer más rápido y fácil el ejercicio, usando la versión más actual de la imagen. Eventualmente llevaré la práctica a AWS en el servicio de EC2 primero con docker. Con el siguiente comando el servidor nginx estará listo.
