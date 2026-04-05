@@ -1,3 +1,4 @@
+# archivos de java
 # Compiled class file
 *.class
 
@@ -22,3 +23,46 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# archivos de angular
+# Compilación y salida
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Dependencias (nunca subas esta carpeta)
+/node_modules
+
+# Caché de herramientas
+/.sass-cache
+/.cache
+/.angular
+
+# Configuración de entorno (¡Importante! No subir secretos)
+.env
+.env.*
+src/environments/environment.prod.ts
+
+# Archivos del sistema y editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs de error
+npm-debug.log
+yarn-error.log
+combined-statistics.json
+
+# Pruebas y cobertura
+/coverage
+/reports
+
+
+
