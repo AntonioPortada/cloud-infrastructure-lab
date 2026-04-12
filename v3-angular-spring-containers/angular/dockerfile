@@ -5,7 +5,7 @@ WORKDIR /app
 COPY app/ .
 
 RUN npm install \
-    && npx ng build
+    && npx ng build --base-href=/app/
 
 FROM nginx:alpine
 
