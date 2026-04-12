@@ -4,14 +4,14 @@ services:
     image: nginx:alpine
     ports:
       - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     networks:
       - server-http
 
   web:
     container_name: web
     build: ./angular/
-    ports:
-      - "81:80"
     networks:
       - server-http
 
