@@ -1,0 +1,20 @@
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    networks:
+      - server-http
+
+  web:
+    container_name: web
+    build: ./angular/
+    ports:
+      - "81:80"
+    networks:
+      - server-http
+
+networks:
+  server-http:
+    external: true
